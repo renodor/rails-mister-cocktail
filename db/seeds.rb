@@ -40,6 +40,6 @@ puts 'Clean Doses Table'
 Dose.destroy_all
 
 puts 'Create Doses'
-Dose.create!(description: '5litres', cocktail_id: 1, ingredient_id: 7)
+Dose.create!(description: '5litres', cocktail_id: 1, ingredient_id: 50)
 puts 'Done!'
 puts ">>>> #{Dose.count} dose created"

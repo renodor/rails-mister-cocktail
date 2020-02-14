@@ -10,6 +10,7 @@ class CocktailsController < ApplicationController
 
   def new
     @cocktail = Cocktail.new
+    @cocktail.name = params["cocktail-name"]
   end
 
   def create

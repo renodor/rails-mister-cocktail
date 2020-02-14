@@ -13,7 +13,7 @@
 
 .navbar-logo {
   flex-grow: 1;
-  text-align:center;
+  text-align:right;
 }
 
 .navbar {
@@ -23,3 +23,40 @@
 .navbar-brand {
   padding: 0px;
 }
+
+.nav-form {
+  margin-top: 32px;
+}
+
+.nav-form input {
+  background-color: transparent;
+  text-align: right;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid rgb(100, 100, 100);
+  border-radius: 0px;
+  &:focus {
+    background-color: transparent;
+  }
+  &::-webkit-input-placeholder {
+    color: rgb(100, 100, 100);
+  }
+}
+
+.nav-form input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.nav-form button {
+  background-color: transparent;
+  border: 1px solid #f49488;
+  color: #f49488;
+  border-radius: 0px;
+  &:hover {
+    color: #ffffff;
+    background-color: #f49488;
+  }
+}
+
+

@@ -1,41 +1,56 @@
-.card-category {
-  background-size: cover;
-  background-position: center;
-  height: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+.card-container {
+  overflow: hidden;
+  position: relative;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-category:hover .hover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.card-container:hover {
+  .card-hover {
+    background-color: rgba(244, 148, 136, 0.3);
+  }
+  .card-title {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1.2);
+  }
+  .card-background {
+    transform: scale(1.2);
+  }
+}
+
+.card-background {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  transition: transform 1.5s ease;
+}
+
+.card-hover {
   width: 100%;
   height: 100%;
   border-radius: 5px;
-  background-color: rgba(244, 148, 136, 0.3);
-  transition: all 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+.card-title {
+  text-align: center;
+  position: absolute;
+  top: 42%;
+  width: 100%;
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  a {
-    color: #ffffff;
-  }
 }
 
-.cards a:hover {
-  text-decoration: none;
-}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {

@@ -17,3 +17,16 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 import 'bootstrap';
+
+
+import { DynamicInputText } from '../components/navbar';
+
+document.addEventListener('turbolinks:load', () => {
+  DynamicInputText();
+});
+
+const input = document.getElementById("banner-typed-text");
+
+input.addEventListener('focus', (event) => {
+  console.log
+});

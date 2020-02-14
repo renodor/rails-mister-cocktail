@@ -1,9 +1,9 @@
-<div class="container">
+<div class="container mt-5 cocktail-form ">
   <h1>Create New Cocktail</h1>
   <%= simple_form_for @cocktail do |f| %>
     <%= f.input :name %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit %>
+    <%= f.input :photo, as: :file, label: false %>
+    <%= f.submit class: "cocktail-button" %>
   <% end %>
 
   <hr>

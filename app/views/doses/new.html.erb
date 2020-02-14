@@ -1,15 +1,12 @@
-<div class="container">
-  <h1>Create New Dose for <%= @cocktail.name %></h1>
+<div class="container mt-5 cocktail-form">
+  <h3>Create New Dose for <%= @cocktail.name %></h3>
 
   <%= simple_form_for [@cocktail, @dose] do |f| %>
     <%= f.input :description %>
     <%= f.association :ingredient, collection: Ingredient.order(:name) %>
-    <%= f.submit %>
+    <%= f.submit class: "cocktail-button" %>
   <% end %>
 
   <hr>
-  <%= link_to 'Back to Cocktail', cocktail_path(@cocktail) %>
-
-  <hr>
-  <%= link_to 'Back to List', cocktails_path %>
+  <%= link_to 'Back to List', root_path %>
 </div>

@@ -13,11 +13,7 @@
 
 .navbar-logo {
   flex-grow: 1;
-  text-align:right;
-}
-
-.navbar {
-  padding-bottom: 0px;
+  text-align:center;
 }
 
 .navbar-brand {
@@ -48,15 +44,30 @@
   color: transparent;
 }
 
-.nav-form button {
-  background-color: transparent;
-  border: 1px solid #f49488;
-  color: #f49488;
-  border-radius: 0px;
-  &:hover {
-    color: #ffffff;
-    background-color: #f49488;
-  }
+.navbar .container {
+  position: relative;
 }
 
+.cocktail-create {
+  position: absolute;
+  right: 16px;
+}
+
+.nav-form .form-control {
+    width: auto!important;
+  }
+
+@media(max-width: 767px) {
+  .cocktail-create {
+    position: relative;
+  }
+
+  .navbar .container {
+    flex-direction: column;
+  }
+
+  .nav-form {
+    margin-top: 0px;
+  }
+}
 

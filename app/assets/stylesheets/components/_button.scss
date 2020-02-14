@@ -1,0 +1,12 @@
+.cocktail-button {
+  background-color: transparent;
+  border: 1px solid #f49488;
+  color: #f49488;
+  border-radius: 0px;
+  padding: 6px 15px;
+  transition: all 200ms ease-in-out;
+  &:hover {
+    color: #ffffff;
+    background-color: #f49488;
+  }
+}

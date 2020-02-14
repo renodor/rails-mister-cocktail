@@ -1,7 +1,7 @@
 <div class="container mt-5">
   <div class="cards">
     <% @cocktails.each do |cocktail| %>
-      <%= link_to cocktail_path(cocktail) do %>
+      <a class="" data-toggle="modal" data-target="#cocktail-<%= cocktail.id %>">
         <div class="card-container">
             <% if cocktail.photo.attached? %>
               <div class="card-background" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key %>')">
@@ -14,11 +14,40 @@
             <span><%= cocktail.name %></span>
           </div>
         </div>
-      <% end %>
+      </a>
+
+      <!-- Modal -->
+        <div class="modal fade" id="cocktail-<%= cocktail.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+              <div class="modal-header" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('<%= cl_image_path cocktail.photo.key %>')">
+                <h5 class="modal-title" id="exampleModalScrollableTitle"><%= cocktail.name %></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <ul class="list-unstyled">
+                  <% @doses.each do |dose| %>
+                      <% if dose.cocktail_id == cocktail.id %>
+                        <li>
+                          <b><%= dose.ingredient.name %></b> - <%= dose.description %>
+                          <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
+                            <i class="fas fa-times"></i>
+                          <% end %>
+                        </li>
+                      <% end %>
+                  <% end %>
+                </ul>
+              </div>
+                <div class="modal-footer">
+                  <%= link_to new_cocktail_dose_path(cocktail) do %>
+                    Add doses <i class="fas fa-cocktail"></i>
+                  <% end %>
+                </div>
+            </div>
+          </div>
+        </div>
     <% end %>
   </div>
-
-
-  <ul>
-  </ul>
 </div>

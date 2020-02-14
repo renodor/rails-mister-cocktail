@@ -1,0 +1,39 @@
+.modal-dialog {
+  margin-top: 100px;
+}
+
+.modal-header {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  align-items: center;
+  justify-content: center;
+  h5 {
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1.2);
+    color: #ffffff;
+  }
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+}
+
+.close span {
+  color: #ffffff;
+}
+
+.modal i {
+  color: $pink;
+  margin-left: 5px;
+}
+
+.modal-footer a {
+  color: $pink;
+}
+
+.modal-content {
+  border-radius: 5px;
+}

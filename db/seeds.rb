@@ -8,6 +8,9 @@ require 'open-uri'
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+puts 'Clean Doses Table'
+Dose.destroy_all
+
 puts 'Clean Ingredient Table'
 Ingredient.destroy_all
 
@@ -25,21 +28,19 @@ puts 'Done!'
 puts ">>>> #{Ingredient.count} ingredients created"
 puts "-------------------------------------------"
 
-puts 'Clean Cocktail Table'
-Cocktail.destroy_all
+# puts 'Clean Cocktail Table'
+# Cocktail.destroy_all
 
-puts 'Create Cocktails'
-Cocktail.create!(name: 'Cocktail du Démon')
-Cocktail.create!(name: 'Cocktail de Ouf')
+# puts 'Create Cocktails'
+# Cocktail.create!(name: 'Cocktail du Démon')
+# Cocktail.create!(name: 'Cocktail de Ouf')
 
-puts 'Done'
-puts ">>>> #{Cocktail.count} ingredients created"
-puts "-------------------------------------------"
+# puts 'Done'
+# puts ">>>> #{Cocktail.count} ingredients created"
+# puts "-------------------------------------------"
 
-puts 'Clean Doses Table'
-Dose.destroy_all
 
-puts 'Create Doses'
-Dose.create!(description: '5litres', cocktail_id: 1, ingredient_id: 50)
-puts 'Done!'
-puts ">>>> #{Dose.count} dose created"
+# puts 'Create Doses'
+# Dose.create!(description: '5litres', cocktail_id: 1, ingredient_id: 50)
+# puts 'Done!'
+# puts ">>>> #{Dose.count} dose created"

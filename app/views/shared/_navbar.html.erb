@@ -5,7 +5,7 @@
         <%= image_tag "https://cdn.dribbble.com/users/1828677/screenshots/6153056/cocktail2.gif" %>
       <% end %>
     </div>
-    <div class="navbar-collapse cocktail-create" id="navbarSupportedContent">
+    <div class="navbar-collapse hide-mobile" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <form class="form-inline nav-form" action=<%= new_cocktail_path %>>
@@ -15,4 +15,10 @@
       </ul>
     </div>
   </div>
+</div>
+
+<div class="create-button">
+  <%= link_to new_cocktail_path do %>
+    <i class="fas fa-plus-circle"></i>
+  <% end %>
 </div>

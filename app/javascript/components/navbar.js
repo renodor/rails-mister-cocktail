@@ -19,4 +19,10 @@ const DynamicInputText = () => {
   });
 }
 
+const createButton = document.querySelector('.create-button');
+
+window.setInterval(function(){
+  createButton.classList.toggle("rotate-center");
+}, 1800);
+
 export { DynamicInputText };
